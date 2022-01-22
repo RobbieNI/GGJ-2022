@@ -10,6 +10,8 @@ public class SphereMovement : MonoBehaviour
 	[Header("Properties: ")]
 	[SerializeField] private float _speed;
 	[SerializeField] private float _jumpForce;
+	[SerializeField] private float _fallMultiplier;
+	[SerializeField] private float _lowJumpMultiplier;
 
 	private void Update()
 	{
@@ -17,6 +19,15 @@ public class SphereMovement : MonoBehaviour
 		{
 			_rb.AddForce(new Vector3(0, _jumpForce, 0), ForceMode.Impulse);
 		}
+
+		if (_rb.velocity.y < 0)
+        {
+			_rb.velocity += Vector3.up * Physics.gravity.y * (_fallMultiplier - 1) * Time.deltaTime;
+        }
+		else if (_rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        {
+			_rb.velocity += Vector3.up * Physics.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
+        }
 	}
 
 	void FixedUpdate()

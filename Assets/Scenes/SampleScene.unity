@@ -577,6 +577,8 @@ MonoBehaviour:
   _rb: {fileID: 1629004228}
   _speed: 5
   _jumpForce: 200
+  _fallMultiplier: 3
+  _lowJumpMultiplier: 2
 --- !u!65 &1629004224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -584,7 +586,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629004222}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4fe0fecf01011534cad5c2d3e1491fc9, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -661,7 +663,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629004222}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -952,6 +954,8 @@ MonoBehaviour:
   _rb: {fileID: 2044707230}
   _speed: 15
   _jumpForce: 5
+  _fallMultiplier: 2.5
+  _lowJumpMultiplier: 5
 --- !u!54 &2044707230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -975,7 +979,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044707228}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 24f3b4ac0dbf2ad4290d93dfc541dc68, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
