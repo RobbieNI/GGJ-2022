@@ -12,27 +12,59 @@ public class CubeMovement : MonoBehaviour
     [SerializeField] private float _fallMultiplier;
     [SerializeField] private float _lowJumpMultiplier;
 
+    private bool _inputEnabled;
+
+    private void Awake()
+    {
+        _inputEnabled = true;
+        PlayerRespawn._toggleInput += ToggleInput;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerRespawn._toggleInput -= ToggleInput;
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (_inputEnabled)
         {
-            _rb.AddForce(new Vector3(0, _jumpForce, 0), ForceMode.Impulse);
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _rb.AddForce(new Vector3(0, _jumpForce, 0), ForceMode.Impulse);
+            }
 
-        if (_rb.velocity.y < 0)
-        {
-            _rb.velocity += Vector3.up * Physics.gravity.y * (_fallMultiplier - 1) * Time.deltaTime;
+            if (_rb.velocity.y < 0)
+            {
+                _rb.velocity += Vector3.up * Physics.gravity.y * (_fallMultiplier - 1) * Time.deltaTime;
+            }
+            else if (_rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+            {
+                _rb.velocity += Vector3.up * Physics.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
+            }
         }
-        else if (_rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+    }
+
+    public void ToggleInput(bool state)
+    {
+        if (state)
         {
-            _rb.velocity += Vector3.up * Physics.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
+            _inputEnabled = true;
+        }
+        else
+        {
+            _inputEnabled = false;
         }
     }
 
     void FixedUpdate()
     {
-        float mH = Input.GetAxis("Horizontal");
-        float mV = Input.GetAxis("Vertical");
-        _rb.velocity = new Vector3(mH * _speed, _rb.velocity.y, mV * _speed);
+        if (_inputEnabled)
+        {
+            float mH = Input.GetAxis("Horizontal");
+            float mV = Input.GetAxis("Vertical");
+
+            _rb.velocity = new Vector3(mH * _speed, _rb.velocity.y, mV * _speed);
+        }
     }
 }

@@ -9,6 +9,7 @@ public class TriggerActivateButtonPress : TriggerActivate
 
     public static Action<string> inInteractiveTriggerZone;
     public static Action leavingInteractiveTriggerZone;
+
     protected override void ActivateTriggerEffect()
     {
         inTriggerZone = true;
