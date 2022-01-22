@@ -33,6 +33,7 @@ public class CubeMovement : MonoBehaviour
     {
         float mH = Input.GetAxis("Horizontal");
         float mV = Input.GetAxis("Vertical");
+
         _rb.velocity = new Vector3(mH * _speed, _rb.velocity.y, mV * _speed);
     }
 }

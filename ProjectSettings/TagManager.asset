@@ -7,6 +7,7 @@ TagManager:
   - Stair
   - Climb
   - Fly
+  - RespawnZone
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ice
+  - Lava
+  - Sphere
+  - Cube
   - 
   - 
   - 
