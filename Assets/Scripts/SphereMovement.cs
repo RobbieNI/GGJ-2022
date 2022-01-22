@@ -13,21 +13,38 @@ public class SphereMovement : MonoBehaviour
 	[SerializeField] private float _fallMultiplier;
 	[SerializeField] private float _lowJumpMultiplier;
 
+	RaycastHit _groundedHit;
+	private float _groundCheckDistance = .3f;
+
+	public bool _canJump;
+
 	private void Update()
 	{
+		if (Physics.Raycast(transform.position,  transform.TransformDirection(Vector3.down), out _groundedHit, _groundCheckDistance))
+        {
+			if (_groundedHit.collider)
+            {
+				_canJump = true;
+            }
+			else
+            {
+				_canJump = false;
+            }
+        }
+
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			_rb.AddForce(new Vector3(0, _jumpForce, 0), ForceMode.Impulse);
 		}
 
 		if (_rb.velocity.y < 0)
-        {
+		{
 			_rb.velocity += Vector3.up * Physics.gravity.y * (_fallMultiplier - 1) * Time.deltaTime;
-        }
+		}
 		else if (_rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
-        {
+		{
 			_rb.velocity += Vector3.up * Physics.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
-        }
+		}
 	}
 
 	void FixedUpdate()
