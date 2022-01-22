@@ -8,7 +8,7 @@ public class TogglePlayers : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _vCam;
 
     [Header("Sphere Player: ")]
-    [SerializeField] private bool _sphereActive;
+    [SerializeField] public static bool _sphereActive;
     [SerializeField] private GameObject _spherePlayer;
 
     [Header("Cube Player: ")]
@@ -65,6 +65,7 @@ public class TogglePlayers : MonoBehaviour
             _sphereRB.velocity = _cubeRB.velocity;
 
             _sphereActive = true;
+            _cubeActive = false;
         }
 
         if (playerID == 1)
@@ -78,6 +79,10 @@ public class TogglePlayers : MonoBehaviour
             _cubeRB.velocity = _sphereRB.velocity;
 
             _cubeActive = true;
+            _sphereActive = false;
         }
     }
+
+    public static bool CurrentStateIsSphere() => _sphereActive;
+
 }

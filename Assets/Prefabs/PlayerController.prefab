@@ -54,7 +54,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3874177240436684942}
-  - component: {fileID: 3874177240436684977}
   - component: {fileID: 984977106}
   m_Layer: 0
   m_Name: Camera - vCam
@@ -78,41 +77,6 @@ Transform:
   m_Father: {fileID: 3874177242057092836}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3874177240436684977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3874177240436684976}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ExcludedPropertiesInInspector:
-  - m_Script
-  m_LockStageInInspector: 
-  m_StreamingVersion: 20170927
-  m_Priority: 10
-  m_StandbyUpdate: 1
-  m_LookAt: {fileID: 1680623842}
-  m_Follow: {fileID: 1680623842}
-  m_Lens:
-    FieldOfView: 60
-    OrthographicSize: 5
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
-    Dutch: 0
-    LensShift: {x: 0, y: 0}
-  m_Transitions:
-    m_BlendHint: 0
-    m_InheritPosition: 0
-    m_OnCameraLive:
-      m_PersistentCalls:
-        m_Calls: []
-  m_LegacyBlendHint: 0
-  m_ComponentOwner: {fileID: 3874177241251986436}
 --- !u!114 &984977106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +164,7 @@ MonoBehaviour:
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
-  m_BindingMode: 1
+  m_BindingMode: 5
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: -25
@@ -482,7 +446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3874177241756647419}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: -5.12}
+  m_LocalPosition: {x: -2.403138, y: 0, z: -2.6773186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3874177242057092836}
@@ -511,9 +475,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -775,6 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3874177242057092836}
   - component: {fileID: 3874177242057092837}
+  - component: {fileID: 5168226935813540940}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -815,9 +780,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b5049206ff427409e9a3428da3e2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vCam: {fileID: 3874177240436684977}
+  _vCam: {fileID: 0}
   _sphereActive: 0
   _spherePlayer: {fileID: 3874177241667664818}
   _cubeActive: 0
   _cubePlayer: {fileID: 3874177241798122384}
   _followMovement: {fileID: 1680623841}
+--- !u!114 &5168226935813540940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874177242057092839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ce69c1023d3db41b1723954406b737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sphereMaterials: []
+  _cubeMaterials: []
+  _sphere: {fileID: 0}
+  _cube: {fileID: 0}
