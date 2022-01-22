@@ -14,6 +14,9 @@ public class TogglePlayers : MonoBehaviour
     [Header("Cube Player: ")]
     [SerializeField] private bool _cubeActive;
     [SerializeField] private GameObject _cubePlayer;
+    
+    [Header("Camera")]
+    [SerializeField] private FollowMovement _followMovement;
 
     private Rigidbody _cubeRB;
     private Rigidbody _sphereRB;
@@ -56,9 +59,8 @@ public class TogglePlayers : MonoBehaviour
             _spherePlayer.transform.position = _cubePlayer.transform.position;
 
             _spherePlayer.SetActive(true);
-
-            _vCam.Follow = _spherePlayer.transform;
-            _vCam.LookAt = _spherePlayer.transform;
+            
+            _followMovement.SetTarget(_spherePlayer.transform);
 
             _sphereRB.velocity = _cubeRB.velocity;
 
@@ -70,9 +72,8 @@ public class TogglePlayers : MonoBehaviour
             _cubePlayer.transform.position = _spherePlayer.transform.position;
 
             _cubePlayer.SetActive(true);
-
-            _vCam.Follow = _cubePlayer.transform;
-            _vCam.LookAt = _cubePlayer.transform;
+            
+            _followMovement.SetTarget(_cubePlayer.transform);
 
             _cubeRB.velocity = _sphereRB.velocity;
 
