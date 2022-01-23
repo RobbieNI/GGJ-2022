@@ -1257,7 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c762243c8485b54f9c9bf7c1498bc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: MATT_LEVEL
+  _sceneToLoad: Puzzle Room
   _pauseScript: {fileID: 0}
 --- !u!1 &1982772941
 GameObject:

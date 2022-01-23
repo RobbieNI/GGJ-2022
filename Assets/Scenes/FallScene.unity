@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &412375974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5995417109056398056, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+  m_PrefabInstance: {fileID: 4968303347621753554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &412375975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4968303347102142434, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+  m_PrefabInstance: {fileID: 4968303347621753554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f3e6c29ca2f4b4a92043c404469120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &612726484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4968303347968531579, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+  m_PrefabInstance: {fileID: 4968303347621753554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &612726488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612726484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 5d58658a446eed54c9b9a79be91c5510, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 412375975}
+          m_TargetAssemblyTypeName: LevelChangeStart, Assembly-CSharp
+          m_MethodName: loadlevel
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1617968077
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +518,34 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1663768056}
+    - target: {fileID: 4968303346415023293, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000057037836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968303346415023293, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.3746667
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968303346415023293, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.86285
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968303346415023293, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9600222
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968303346415023293, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.27992406
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968303346415023293, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000032466828
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968303346415023293, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000009466704
+      objectReference: {fileID: 0}
     - target: {fileID: 4968303347138904820, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
       propertyPath: m_Follow
       value: 
@@ -470,13 +555,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1663768056}
     - target: {fileID: 4968303347968531576, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968303347968531576, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
       objectReference: {fileID: 1637619481}
     - target: {fileID: 4968303347968531576, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 412375974}
     - target: {fileID: 4968303347968531576, guid: 9208c9bfb8174a34d8416d2dcdd6af8b, type: 3}
       propertyPath: m_ExposedReferences.m_References.Array.data[3].second
       value: 

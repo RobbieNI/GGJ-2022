@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 0593344fc09809543a6d9871857110c2
+  - enabled: 1
+    path: Assets/Scenes/Puzzle Room.unity
+    guid: 1ae834c7aee96804da402840d599bb48
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640

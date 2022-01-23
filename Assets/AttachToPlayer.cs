@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class AttachToPlayer : MonoBehaviour
 {
-    [SerializeField] private Transform player;
     private void OnEnable()
     {
-        transform.position = player.position;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        transform.position = player.transform.position;
     }
 }

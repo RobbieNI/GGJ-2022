@@ -4874,6 +4874,7 @@ GameObject:
   - component: {fileID: 6730542421208546826}
   - component: {fileID: 8827978747673430720}
   - component: {fileID: 1599084000247415038}
+  - component: {fileID: 7690338219865292234}
   m_Layer: 0
   m_Name: Poppy
   m_TagString: Untagged
@@ -4960,3 +4961,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78acb45790893db4aaf67b92f3e95659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &7690338219865292234
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026666095698930453}
+  m_Material: {fileID: 13400000, guid: 24f3b4ac0dbf2ad4290d93dfc541dc68, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 258356572376914059, guid: 05de6d43baf14394e9059a4fcae03c13, type: 3}
