@@ -2276,6 +2276,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3874177242057092837, guid: 5da4db875bb5b7545a884261390d29e6, type: 3}
+      propertyPath: _cubeActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874177242057092837, guid: 5da4db875bb5b7545a884261390d29e6, type: 3}
+      propertyPath: _sphereActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3874177242057092839, guid: 5da4db875bb5b7545a884261390d29e6, type: 3}
       propertyPath: m_Name
       value: PlayerController
@@ -3326,7 +3334,7 @@ PrefabInstance:
     - target: {fileID: 7555202573093010458, guid: c583ee720702c4dc7891156deb625113, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ef9ba9f7ba1014de88f441963f9ad8bb, type: 2}
+      objectReference: {fileID: 2100000, guid: aed344615e4921c42882050a1ac0ea18, type: 2}
     - target: {fileID: 7994451203509995041, guid: c583ee720702c4dc7891156deb625113, type: 3}
       propertyPath: m_Name
       value: movers_01
@@ -3567,11 +3575,11 @@ PrefabInstance:
     - target: {fileID: 7083926055217061946, guid: 9bca6e22b8b254b50856803efe1a5418, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 881a05896d2b84269a7b9e7df765ec41, type: 2}
+      objectReference: {fileID: 2100000, guid: 67066cf8370d54d6cb6be3db3dc19cd5, type: 2}
     - target: {fileID: 7083926055217061946, guid: 9bca6e22b8b254b50856803efe1a5418, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 881a05896d2b84269a7b9e7df765ec41, type: 2}
+      objectReference: {fileID: 2100000, guid: 67066cf8370d54d6cb6be3db3dc19cd5, type: 2}
     - target: {fileID: 7083926055217061946, guid: 9bca6e22b8b254b50856803efe1a5418, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
