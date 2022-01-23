@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 3874177242057092837}
   - component: {fileID: 5168226935813540940}
   m_Layer: 0
-  m_Name: PlayerController
+  m_Name: PlayerController John
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
