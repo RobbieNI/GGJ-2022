@@ -7,10 +7,18 @@ using UnityEngine.SceneManagement;
 public class RunSceneOnDoubleClick : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private string _sceneToLoad;
+    [SerializeField] private PauseMenu _pauseScript;
 
     public void OnDoubleClick()
     {
-        SceneManager.LoadScene(_sceneToLoad);
+        if (_sceneToLoad == "PauseMenu")
+        {
+            _pauseScript.ToggleMenu(false);
+        }
+        else
+        {
+            SceneManager.LoadScene(_sceneToLoad);
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
