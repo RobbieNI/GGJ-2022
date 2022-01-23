@@ -463,6 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4968303347968531577}
   - component: {fileID: 4968303347968531576}
+  - component: {fileID: 672305279107203873}
   m_Layer: 0
   m_Name: LevelChange
   m_TagString: Untagged
@@ -518,6 +519,18 @@ PlayableDirector:
     - 763ec42366fd8614196670bacb5f46ad: {fileID: 4968303347138904820}
     - e14b8d81-6006-4fe9-ad48-c71d98b7a357: {fileID: 0}
     - 2adf998d0b53c054189b52bfc9836d93: {fileID: 4968303346415023266}
+--- !u!114 &672305279107203873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968303347968531579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6d2c2f8f726ec4b88c55df5820e7c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4968303348004162660
 GameObject:
   m_ObjectHideFlags: 0
