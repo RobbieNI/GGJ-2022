@@ -6,6 +6,7 @@ public class SphereMovement : MonoBehaviour
 {
 	[Header("References: ")]
 	[SerializeField] private Rigidbody _rb;
+	[SerializeField] private CheckJumpCollision _jumpScript;
 
 	[Header("Properties: ")]
 	[SerializeField] private float _speed;
@@ -28,8 +29,8 @@ public class SphereMovement : MonoBehaviour
 
 	private void Update()
 	{
-		if (_inputEnabled)
-        {
+		if (_inputEnabled && _jumpScript._canJump)
+		{
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
 				_rb.AddForce(new Vector3(0, _jumpForce, 0), ForceMode.Impulse);

@@ -5,6 +5,7 @@ public class CubeMovement : MonoBehaviour
 {
     [Header("References: ")]
     [SerializeField] private Rigidbody _rb;
+    [SerializeField] private CheckJumpCollision _jumpScript;
 
     [Header("Properties: ")]
     [SerializeField] private float _speed;
@@ -14,9 +15,11 @@ public class CubeMovement : MonoBehaviour
 
     private bool _inputEnabled;
 
+
     private void Awake()
     {
         _inputEnabled = true;
+
         PlayerRespawn._toggleInput += ToggleInput;
     }
 
@@ -27,7 +30,7 @@ public class CubeMovement : MonoBehaviour
 
     private void Update()
     {
-        if (_inputEnabled)
+        if (_inputEnabled && _jumpScript._canJump)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {

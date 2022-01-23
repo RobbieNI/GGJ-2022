@@ -1053,6 +1053,7 @@ GameObject:
   - component: {fileID: 1629004228}
   - component: {fileID: 1629004223}
   - component: {fileID: 1629004229}
+  - component: {fileID: 1629004230}
   m_Layer: 9
   m_Name: Cube
   m_TagString: Player
@@ -1073,6 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 1629004228}
+  _jumpScript: {fileID: 1629004230}
   _speed: 5
   _jumpForce: 200
   _fallMultiplier: 3
@@ -1237,6 +1239,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1629004230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629004222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853b1078114d27e4ea35587e403e97e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canJump: 0
 --- !u!1 &1653551581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,6 +1845,7 @@ GameObject:
   - component: {fileID: 2044707230}
   - component: {fileID: 2044707229}
   - component: {fileID: 2044707235}
+  - component: {fileID: 2044707236}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Player
@@ -1850,6 +1866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 2044707230}
+  _jumpScript: {fileID: 2044707236}
   _speed: 15
   _jumpForce: 5
   _fallMultiplier: 2.5
@@ -2014,6 +2031,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2044707236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044707228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853b1078114d27e4ea35587e403e97e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canJump: 0
 --- !u!1 &2126274423
 GameObject:
   m_ObjectHideFlags: 0
