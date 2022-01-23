@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMaterialUpdate : MonoBehaviour
 {
-    [SerializeField] private Material[] _sphereMaterials;
-    [SerializeField] private Material[] _cubeMaterials;
+    [SerializeField] private Color[] _sphereMaterials;
+    [SerializeField] private Color[] _cubeMaterials;
     
     [SerializeField] private Renderer _sphere;
     [SerializeField] private Renderer _cube;
@@ -15,13 +15,17 @@ public class PlayerMaterialUpdate : MonoBehaviour
 
     public void UpdateSphereMaterial(int index)
     {
-        _sphere.material = _sphereMaterials[index];
+        var mat = _sphere.material;
+        mat.color = _sphereMaterials[index];
+        _sphere.material = mat;
         _currentSphereMaterialIndex = index;
     }
     
     public void UpdateCubeMaterial(int index)
     {
-        _cube.material = _cubeMaterials[index];
+        var mat = _cube.material;
+        mat.color = _cubeMaterials[index];
+        _cube.material = mat;
         _currentCubeMaterialIndex = index;
     }
     
