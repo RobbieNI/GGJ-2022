@@ -6,6 +6,7 @@ public class CubeMovement : MonoBehaviour
     [Header("References: ")]
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private CheckJumpCollision _jumpScript;
+    [SerializeField] private AudioSource _moveAudio;
 
     [Header("Properties: ")]
     [SerializeField] private float _speed;
@@ -14,7 +15,6 @@ public class CubeMovement : MonoBehaviour
     [SerializeField] private float _lowJumpMultiplier;
 
     private bool _inputEnabled;
-
 
     private void Awake()
     {
@@ -45,6 +45,18 @@ public class CubeMovement : MonoBehaviour
             {
                 _rb.velocity += Vector3.up * Physics.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
             }
+        }
+
+        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+        {
+            if (!_moveAudio.isPlaying)
+            {
+                _moveAudio.Play();
+            }
+        }
+        else
+        {
+            _moveAudio.Stop();
         }
     }
 
