@@ -71,9 +71,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8871220037917524158}
+  - component: {fileID: 798090074123455291}
   m_Layer: 0
   m_Name: joint1
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +94,19 @@ Transform:
   m_Father: {fileID: 9152815016161781875}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &798090074123455291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424081335811246962}
+  m_Material: {fileID: 13400000, guid: 97a4472e8eea9ee4fa4274b4fb135609, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.429184, y: 1, z: 1}
+  m_Center: {x: -6.714573, y: -0.0000045149636, z: 0}
 --- !u!1 &4753955855932974272
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,9 +116,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6726506895979786797}
+  - component: {fileID: 302297998521758140}
   m_Layer: 0
   m_Name: joint4
-  m_TagString: Untagged
+  m_TagString: Hammer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,12 +132,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4753955855932974272}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -4, y: -8.881784e-16, z: 0}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4733271021955696946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &302297998521758140
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753955855932974272}
+  m_Material: {fileID: 13400000, guid: 97a4472e8eea9ee4fa4274b4fb135609, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.3329835, y: 2.1382139, z: 1}
+  m_Center: {x: 0.47198752, y: 0.081903644, z: 0}
 --- !u!1 &8057574298976358570
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7204944706496544436}
   - component: {fileID: 5540060436516280821}
+  - component: {fileID: 2092210790935552373}
   m_Layer: 0
   m_Name: hammer
   m_TagString: Untagged
@@ -211,6 +240,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -7.0066824, y: -0.22801483, z: -0.21083558}
     m_Extent: {x: 6.9363174, y: 2.917992, z: 1.0941993}
   m_DirtyAABB: 0
+--- !u!64 &2092210790935552373
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8057574298976358570}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &8380781572879512265
 GameObject:
   m_ObjectHideFlags: 0
