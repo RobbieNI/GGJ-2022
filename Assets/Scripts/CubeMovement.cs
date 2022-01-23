@@ -5,6 +5,8 @@ public class CubeMovement : MonoBehaviour
 {
     [Header("References: ")]
     [SerializeField] private Rigidbody _rb;
+    [SerializeField] private CheckJumpCollision _jumpScript;
+    [SerializeField] private AudioSource _moveAudio;
 
     [Header("Properties: ")]
     [SerializeField] private float _speed;
@@ -17,6 +19,7 @@ public class CubeMovement : MonoBehaviour
     private void Awake()
     {
         _inputEnabled = true;
+
         PlayerRespawn._toggleInput += ToggleInput;
     }
 
@@ -27,7 +30,7 @@ public class CubeMovement : MonoBehaviour
 
     private void Update()
     {
-        if (_inputEnabled)
+        if (_inputEnabled && _jumpScript._canJump)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -42,6 +45,18 @@ public class CubeMovement : MonoBehaviour
             {
                 _rb.velocity += Vector3.up * Physics.gravity.y * (_lowJumpMultiplier - 1) * Time.deltaTime;
             }
+        }
+
+        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+        {
+            if (!_moveAudio.isPlaying)
+            {
+                _moveAudio.Play();
+            }
+        }
+        else
+        {
+            _moveAudio.Stop();
         }
     }
 
@@ -63,8 +78,14 @@ public class CubeMovement : MonoBehaviour
         {
             float mH = Input.GetAxis("Horizontal");
             float mV = Input.GetAxis("Vertical");
+            
+            Vector3 movement = new Vector3(mH, 0.0f, mV);
 
-            _rb.velocity = new Vector3(mH * _speed, _rb.velocity.y, mV * _speed);
-        }
+
+            var actualMovement = (Camera.main.transform.TransformDirection(movement));
+            Debug.Log(actualMovement * _speed);
+            actualMovement.y = _rb.velocity.y;
+
+            _rb.velocity = new Vector3(actualMovement.x * _speed,actualMovement.y,actualMovement.z * _speed);        }
     }
 }

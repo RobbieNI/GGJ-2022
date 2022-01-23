@@ -9,6 +9,7 @@ TagManager:
   - Fly
   - RespawnZone
   - Bin
+  - Hammer
   layers:
   - Default
   - TransparentFX

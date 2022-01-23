@@ -8,12 +8,15 @@ public class TogglePlayers : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _vCam;
 
     [Header("Sphere Player: ")]
-    [SerializeField] private bool _sphereActive;
+    [SerializeField] public static bool _sphereActive;
     [SerializeField] private GameObject _spherePlayer;
 
     [Header("Cube Player: ")]
     [SerializeField] private bool _cubeActive;
     [SerializeField] private GameObject _cubePlayer;
+    
+    [Header("Camera")]
+    [SerializeField] private FollowMovement _followMovement;
 
     private Rigidbody _cubeRB;
     private Rigidbody _sphereRB;
@@ -56,13 +59,13 @@ public class TogglePlayers : MonoBehaviour
             _spherePlayer.transform.position = _cubePlayer.transform.position;
 
             _spherePlayer.SetActive(true);
-
-            _vCam.Follow = _spherePlayer.transform;
-            _vCam.LookAt = _spherePlayer.transform;
+            
+            _followMovement.SetTarget(_spherePlayer.transform);
 
             _sphereRB.velocity = _cubeRB.velocity;
 
             _sphereActive = true;
+            _cubeActive = false;
         }
 
         if (playerID == 1)
@@ -70,13 +73,16 @@ public class TogglePlayers : MonoBehaviour
             _cubePlayer.transform.position = _spherePlayer.transform.position;
 
             _cubePlayer.SetActive(true);
-
-            _vCam.Follow = _cubePlayer.transform;
-            _vCam.LookAt = _cubePlayer.transform;
+            
+            _followMovement.SetTarget(_cubePlayer.transform);
 
             _cubeRB.velocity = _sphereRB.velocity;
 
             _cubeActive = true;
+            _sphereActive = false;
         }
     }
+
+    public static bool CurrentStateIsSphere() => _sphereActive;
+
 }
