@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditsScript : MonoBehaviour
 {
@@ -21,12 +22,21 @@ public class CreditsScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             currentLine++;
-            UpdateTextMeshProText();
+
+            if (currentLine == CreditsText.Length)
+            {
+                SceneManager.LoadScene("MenuScene");
+            }
+            else
+            {
+                UpdateTextMeshProText();
+            }
         }
     }
 
     private void UpdateTextMeshProText()
     {
         CreditsTextObject.text = CreditsText[currentLine];
+
     }
 }
