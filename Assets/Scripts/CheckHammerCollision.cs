@@ -10,7 +10,7 @@ public class CheckHammerCollision : MonoBehaviour
         {
             GameObject player = GameObject.FindWithTag("Player");
             Rigidbody rb = player.GetComponent<Rigidbody>();
-            rb.AddForce(new Vector3(5000, 5000, 5000), ForceMode.Impulse);
+            rb.AddForce(new Vector3(100, 100, 100), ForceMode.Impulse);
         }
     }
 }
