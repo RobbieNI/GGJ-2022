@@ -78,8 +78,14 @@ public class CubeMovement : MonoBehaviour
         {
             float mH = Input.GetAxis("Horizontal");
             float mV = Input.GetAxis("Vertical");
+            
+            Vector3 movement = new Vector3(mH, 0.0f, mV);
 
-            _rb.velocity = new Vector3(mH * _speed, _rb.velocity.y, mV * _speed);
-        }
+
+            var actualMovement = (Camera.main.transform.TransformDirection(movement));
+            Debug.Log(actualMovement * _speed);
+            actualMovement.y = _rb.velocity.y;
+
+            _rb.velocity = new Vector3(actualMovement.x * _speed,actualMovement.y,actualMovement.z * _speed);        }
     }
 }
