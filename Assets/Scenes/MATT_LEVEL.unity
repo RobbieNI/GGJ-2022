@@ -2943,7 +2943,7 @@ PrefabInstance:
     - target: {fileID: 1063549942589208409, guid: 8da5a634e8f994521a8a35a65ae8ef89, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a87f7868f95584579836d295a211b386, type: 2}
+      objectReference: {fileID: 2100000, guid: 881a05896d2b84269a7b9e7df765ec41, type: 2}
     - target: {fileID: 1567957979222054540, guid: 8da5a634e8f994521a8a35a65ae8ef89, type: 3}
       propertyPath: m_Name
       value: funnel_01
